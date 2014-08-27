@@ -1,0 +1,10 @@
+1. Quitar Gftp
+2. Añadir Filezilla
+3. Añadir Mplayer
+4. Configurar/Añadir Skins de Conkys
+5. Probar Skype.
+6. Probar Pidgin. Añadirle plugin Facebook y WhatsApp
+7. Cambiar sonido de inicio
+8. Añadir temas.
+9. Conseguir escritorio liviano y personalizable
+10. Actualizar librerías

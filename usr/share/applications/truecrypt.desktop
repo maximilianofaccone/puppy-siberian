@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=TrueCrypt
+GenericName=TrueCrypt
+Comment=TrueCrypt
+Exec=/usr/bin/truecrypt
+Icon=/usr/share/pixmaps/truecrypt.xpm
+Terminal=false
+Type=Application
+Categories=Utility;Encryption;Encryption Tools;

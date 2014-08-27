@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Wbar Config
+Name[es]=Barra Warlock
+Type=Application
+Exec=/usr/bin/wbar-config
+Terminal=false
+Icon=/usr/share/pixmaps/wbar/wbar.png
+Comment=Wbar Configuration
+Comment[es]=Configuración de Wbar
+Categories=X-Desktop;

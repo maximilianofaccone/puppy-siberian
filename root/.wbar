@@ -1,0 +1,48 @@
+i: /usr/share/pixmaps/wbar/osxbarback.png
+c: wbar --bpress --above-desk --vbar --pos right --offset 12 --isize 48 --idist 5 --nanim 4 --falfa 96
+t: /usr/share/fonts/default/TTF/DejaVuSans-BoldOblique/10
+
+i: /usr/share/pixmaps/wbar/wbar.png
+c: wbar-config
+t: Config
+
+i: /usr/local/lib/X11/pixmaps/www48.png
+c: defaultbrowser
+t: iron
+
+i: /usr/local/lib/X11/pixmaps/chat48.png
+c: defaultchat
+t: Chat
+
+i: /usr/local/lib/X11/pixmaps/paint48.png
+c: mtpaint
+t: Mtpaint
+
+i: /usr/local/lib/X11/pixmaps/connect48.png
+c: defaultconnect
+t: Conectar
+
+i: /usr/local/lib/X11/pixmaps/console48.png
+c: roxterm
+t: Terminal
+
+i: /usr/local/lib/X11/pixmaps/home48.png
+c: rox
+t: Root
+
+i: /usr/local/lib/X11/pixmaps/drive48.png
+c: pmount
+t: Montar
+
+i: /usr/local/lib/X11/pixmaps/pet48x.png
+c: ppm
+t: Paquetes
+
+i: /usr/local/lib/X11/pixmaps/multimedia48.png
+c: gnome-mplayer
+t: Reproductor
+
+i: /usr/local/lib/X11/pixmaps/word48.png
+c: abiword
+t: Texto
+
