@@ -1,0 +1,64 @@
+#!/bin/sh
+#(c) Copyright Nov 2007 Barry Kauler www.puppylinux.com
+#2007 Lesser GPL licence v2 (http://www.fsf.org/licensing/licenses/lgpl.html)
+#written dec 2007 for Puppy Linux.
+#Orginally, this was the icon_switcher script written by Barry as shown above. But I hacked it up to make it into a Conky config setter
+#Hacked up by battleshooter 2011
+#For support, find me on the Puppy Linux forums
+#0.01 - Initial
+#0.02 - Jemimah added "disable conky" button. Included all themes in pet.
+#0.03 - Updated picture preview to Jemimah's additions.
+
+PREVIEWSETSGUI=""
+for ONEDIR in `find /root/.conky/ -mindepth 1 -maxdepth 1 -type d | tr '\n' ' '`
+do
+ ONENAME="`basename $ONEDIR`"
+  [ -f $ONEDIR/preview.jpg ] && cp -f $ONEDIR/preview.jpg /tmp/pis-${ONENAME}-preview.jpg
+ PREVIEWSETSGUI="$PREVIEWSETSGUI
+ <hbox>
+  <pixmap><input file>/tmp/pis-${ONENAME}-preview.jpg</input></pixmap>
+  <vbox>
+   <pixmap><input file>/usr/local/lib/X11/pixmaps/invisible96x8.png</input></pixmap>
+   <button><label>${ONENAME}</label></button>
+  </vbox>
+ </hbox>
+"
+
+done
+
+export CONKYSWITCHGUI="
+<window title=\"Conky Configuration Switcher\" icon-name=\"gtk-convert\" resizable=\"false\">
+<vbox>
+ <vbox scrollable=\"true\" width=\"600\" height=\"600\">
+  <text><label>Choose a Conky configuration</label></text>
+
+  ${PREVIEWSETSGUI}
+
+ </vbox>
+  <hbox>
+   <button><label>Disable Conky</label><action>killall conky</action><action>rm /root/Startup/conkystart</action></button>
+   <button><input file stock=\"gtk-quit\"></input><label>QUIT</label></button>
+  </hbox>
+ </vbox>
+</window>"
+
+echo "$CONKYSWITCHGUI" > /tmp/conkyswitchgui
+RETSTUFF="`gtkdialog4 --program=CONKYSWITCHGUI`"
+eval "$RETSTUFF"
+
+NEWTHEME="$EXIT"
+[ "$NEWTHEME" = "QUIT" ] && exit
+[ ! -d /root/.conky/${NEWTHEME} ] && exit
+
+rm /root/Startup/conkystart
+killall conky
+if [ -x /root/.conky/$NEWTHEME/conkystart ] ; then
+	ln -s /root/.conky/$NEWTHEME/conkystart /root/Startup/conkystart
+elif [ -f /root/.conky/$NEWTHEME/conkyrc ] ; then
+	echo -n "conky -c /root/.conky/$NEWTHEME/conkyrc" > /root/Startup/conkystart;
+	chmod 777 /root/Startup/conkystart;
+else
+	exit
+fi
+/root/Startup/conkystart&
+exec conkyswitcher

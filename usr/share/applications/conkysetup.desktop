@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Conky switcher
+Icon=conkyswitcher.xpm
+Comment=Change Conky configs
+Exec=conkyswitcher
+Terminal=false
+Type=Application
+Categories=X-Desktop
