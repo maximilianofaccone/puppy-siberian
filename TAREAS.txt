@@ -1,4 +1,4 @@
-1. Quitar Gftp
+
 2. Añadir Filezilla
 3. Añadir Mplayer
 4. Configurar/Añadir Skins de Conkys
