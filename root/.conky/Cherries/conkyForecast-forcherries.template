@@ -1,0 +1,18 @@
+${font ConkyWeather:size=38}[--datatype=WF]
+${font MoonPhases:size=35}[--datatype=WF]
+${font ConkyWeather:size=38}[--datatype=WF --startday=1]
+${font ConkyWeather:size=38}[--datatype=WF --startday=2]
+${font ConkyWeather:size=38}[--datatype=WF --startday=3]
+${font ConkyWeather:size=38}[--datatype=WF --startday=4]${font}
+${voffset -290}${goto 75}${font DejaVu Sans:size=10}Today
+${goto 75}[--datatype=HT --hideunits --centeredwidth=3] / [--datatype=LT --hideunits --centeredwidth=3]
+${voffset 15}${goto 75}Tonight
+${goto 75}[--datatype=MP]
+${voffset 15}${goto 75}[--datatype=DW --startday=1]
+${goto 75}[--datatype=HT --startday=1 --hideunits --centeredwidth=3] / [--datatype=LT --startday=1 --hideunits --centeredwidth=3]
+${voffset 15}${goto 75}[--datatype=DW --startday=2]
+${goto 75}[--datatype=HT --startday=2 --hideunits --centeredwidth=3] / [--datatype=LT --startday=2 --hideunits --centeredwidth=3]
+${voffset 15}${goto 75}[--datatype=DW --startday=3]
+${goto 75}[--datatype=HT --startday=3 --hideunits --centeredwidth=3] / [--datatype=LT --startday=3 --hideunits --centeredwidth=3]
+${voffset 15}${goto 75}[--datatype=DW --startday=4]
+${goto 75}[--datatype=HT --startday=4 --hideunits --centeredwidth=3] / [--datatype=LT --startday=4 --hideunits --centeredwidth=3]

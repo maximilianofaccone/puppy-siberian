@@ -1,0 +1,11 @@
+#!/bin/bash
+#sleep 15
+conky -c ~/.conky/Ken/cpu &
+sleep 1
+conky -c ~/.conky/Ken/mem &
+sleep 5
+conky -c ~/.conky/Ken/rings &
+#sleep 30
+#conky -c ~/.conky/Ken/weather &
+#sleep 1
+#conky -c ~/.conky/Ken/mail
