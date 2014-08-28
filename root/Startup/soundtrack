@@ -1,0 +1,2 @@
+#!/bin/sh
+mplayer /usr/share/audio/puppy-night.au
